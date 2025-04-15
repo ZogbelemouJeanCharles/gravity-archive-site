@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url("assets/bg2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden; /* ✅ autorise le scroll vertical mais pas horizontal */
+  }
+  
+  
+  body.personnages {
+    background: url("assets/bg3.jpg") no-repeat center center fixed !important;
+    background-size: cover !important;
+  }
+
+  body.univers {
+    background: url("assets/bg5.jpg") no-repeat center center fixed !important;
+    background-size: cover !important;
+  }
+
+
+  
+  header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1em;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-top: 20vh;
+    padding: 0 2em;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 8px #000;
+  }
+  
+  .hero p,
+  .intro-text {
+    margin-top: 10em;
+    font-size: 1.2em;
+    opacity: 0.9;
+   
+  }
+  
+  .quote {
+    font-style: italic;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    opacity: 0.85;
+  
+  }
+  
+  .explore-btn {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+  }
+  
+  .explore-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  #play-music {
+    margin-top: 2em;
+    padding: 0.7em 1.5em;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+  }
+  
+  #play-music:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .characters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* deux colonnes fixes */
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  
+  .character-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .character-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .character-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .character-card h3 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .character-card p {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+  
+  .page-content {
+    padding: 3rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .universe-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+  }
+  
+  /* Animation de fond type particules */
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.05;
+    animation: float 60s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes float {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1000px 1000px;
+    }
+  }
+  
+  .music-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .music-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .universe-image {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .universe-image img {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    transition: transform 0.3s ease;
+  }
+  
+  .universe-image img:hover {
+    transform: scale(1.03);
+  }
+  
+  body.apropos{
+    background: url("assets/bg6.jpg") no-repeat center center fixed !important;
+    background-size: cover !important;
+  }
+
+  body.galerie{
+    background: url("assets/bg7.jpg") no-repeat center center fixed !important;
+    background-size: cover !important;
+  }
+
+  body.musique{
+    background: url("assets/bg8.jpg") no-repeat center center fixed !important;
+    background-size: cover !important;
+  }
